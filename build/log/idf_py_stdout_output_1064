@@ -1,0 +1,186 @@
+Command: C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:\esp\v6.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s2-elf- --target esp32s2 --revision 0 C:\Users\UNILAB\Desktop\projetos-t\hub_automacao_s2\build\hub_automacao_s2.elf C:\Users\UNILAB\Desktop\projetos-t\hub_automacao_s2\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe' 'C:\esp\v6.1\esp-idf\tools\idf.py' '-p' 'COM7'
+ (1580) esp_rmaker_node: Node ID ----- 6867252EEE10[0;32mI (1690) esI (382810) wifi:flush txq[0m
+[0;32mI (382820) wifi:stop sw txq[0m
+[0;32mI (382820) wifi:lmac stop hw txq[0m
+[0;32mI (317) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (337) wifi:wifi driver task: 3ffd89b8, prio:23, stack:6656, core=0[0m
+[0;32mI (347) wifi:wifi firmware version: e12a754[0m
+[0;32mI (347) wifi:wifi certification version: v7.0[0m
+[0;32mI (347) wifi:config NVS flash: enabled[0m
+[0;32mI (347) wifi:config nano formatting: disabled[0m
+[0;32mI (347) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (347) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (347) wifi:Init management short buffer num: 32[0m
+[0;32mI (347) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (347) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (347) wifi:Init static rx buffer num: 10[0m
+[0;32mI (347) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (347) wifi_init: rx ba win: 6[0m
+[0;32mI (347) wifi_init: accept mbox: 6[0m
+[0;32mI (347) wifi_init: tcpip mbox: 32[0m
+[0;32mI (347) wifi_init: udp mbox: 6[0m
+[0;32mI (347) wifi_init: tcp mbox: 6[0m
+[0;32mI (347) wifi_init: tcp tx win: 5760[0m
+[0;32mI (347) wifi_init: tcp rx win: 5760[0m
+[0;32mI (347) wifi_init: tcp mss: 1440[0m
+[0;32mI (357) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (357) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (357) esp_rmaker_work_queue: Work Queue created.[0m
+[1;31mE (357) esp_rmaker_client_data: Failed to get client cert[0m
+[0;32mI (357) esp_claim: Initialising Self Claiming. This may take time.[0m
+[0;32mI (367) esp_claim: Private key already exists with matching type. No need to re-initialise it.[0m
+[0;32mI (997) esp_rmaker_node: Node ID ----- 6867252EEE10[0m
+[0;32mI (997) esp_rmaker_time: Initializing SNTP. Using the SNTP server: pool.ntp.org[0m
+[0;32mI (1007) esp_rmaker_core: Starting RainMaker Work Queue task[0m
+[0;32mI (1007) esp_rmaker_work_queue: RainMaker Work Queue task started.[0m
+[0;32mI (1007) app_network: Reusing cached sec2 salt-verifier from NVS[0m
+[0;32mI (1027) app_wifi: Starting provisioning[0m
+[0;32mI (1027) phy_init: phy_version 2623,ff3f498,Dec 17 2025,14:48:07[0m
+[0;32mI (1077) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (1107) wifi:mode : sta (68:67:25:2e:ee:10)[0m
+[0;32mI (1107) wifi:enable tsf[0m
+[0;32mI (1117) wifi:mode : sta (68:67:25:2e:ee:10) + softAP (68:67:25:2e:ee:11)[0m
+[0;32mI (1127) wifi:Total power save buffer number: 16[0m
+[0;32mI (1127) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1127) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1127) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1127) wifi:Total power save buffer number: 16[0m
+[0;32mI (1137) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1147) network_prov_mgr: Provisioning started with service name : PROV_44d44b [0m
+[0;32mI (1157) app_wifi: Provisioning started[0m
+[0;32mI (1157) app_network: Scan this QR code from the ESP RainMaker phone app for Provisioning.[0m
+[0;32mI (1167) QRCODE: Encoding below text with ECC LVL 0 & QR Code Version 5[0m
+[0;32mI (1177) QRCODE: {"ver":"v1","name":"PROV_44d44b","username":"wifiprov","pop":"252eee10","transport":"softap"}[0m
+                                          
+  █▀▀▀▀▀█ █  ▄▄ ▀▀█ ▄▄▀▄▀▀▄▄▀▀  █▀▀▀▀▀█   
+  █ ███ █ ██▄ █▄█▄▀▀▀ ▀▀▀█▄▄ ▄█ █ ███ █   
+  █ ▀▀▀ █ ▄██ ▀▀▀▀▀ ▄▄ █▄▀ ▀█▀  █ ▀▀▀ █   
+  ▀▀▀▀▀▀▀ ▀ █▄▀ ▀ █▄▀ █▄▀▄▀ ▀ █ ▀▀▀▀▀▀▀   
+  █▀ ▄██▀▄▄ ▀ ▀▄ ▄ ▀█▀▀▀██▀▄ ▄▄▄ █▄▀▀▀▀   
+  ██▀ █▀▀█▄▀▀ ▄ ▀▀█▄  █▄▄▀▄ ██▀██ ▀█▄█▄   
+  ▀▀▀█ █▀ ▄ █▀▄▄▄█▀██▀▀▀ ▄▀▄ ▄▀ ▀█▄▀█▄▀   
+    ▄▀█ ▀▀██▀█▀ ▄▀██▀▄ ▄██▀▀▄█▀█▄█ █▄     
+  ▄▄ ▀  ▀█ █▄ ▀▄ ▄ ▀█▀▄█ █▀▄▄▄▀██▀▄ ▀▀▀   
+  █   ▄█▀█▄ ▀ ▄  █▀▄  ██▄▀█ ██▀█ █▄▀▄▄▄   
+  ██▄   ▀▄█▄▀▀▄▄█▄█▀ ▀▄▀ ▄ ▄ ▄▄██▀▄█▀█▀   
+  ▀     ▀▀ █▄█▀▀ ▀██▀▄ ▄█▀ ▀ █▀█▄▀ █▄▄▄   
+  ▄▀██▄█▀▄▄▄█ ▀  ▄█▀ ▀▄▀█▄█ ▄▄▀▀█▀▄▀▀ ▀   
+     ▄▄▀▀█▀   ▄ █▀ ▄ ▄ ██▀ ▀▀█▀ █▄█▄█▀▄   
+  ▀▀▀  ▀▀▀██▄▀▄▀██▄▀▄▀██▀█▄▄▄▄█▀▀▀█ ▀▄    
+  █▀▀▀▀▀█ ▄▄ █▀█▀███▄▄ ▄ ▀  ▄▄█ ▀ ██▄     
+  █ ███ █ ▀ ▄ ▀█▄▄██▄ ▄▀█▄█ ▄▄████▀▄██▄   
+  █ ▀▀▀ █ ▄▀█ ▄ ▄▀▄▄▀▄ ████ █ ▄  ▀▄██▄    
+  ▀▀▀▀▀▀▀ ▀ ▀▀ ▀▀ ▀▀ ▀▀▀  ▀  ▀   ▀▀ ▀▀▀   
+                                          
+
+[0;32mI (1467) app_network: If QR code is not visible, copy paste the below URL in a browser.[0m
+https://rainmaker.espressif.com/qrcode.html?data={"ver":"v1","name":"PROV_44d44b","username":"wifiprov","pop":"252eee10","transport":"softap"}
+[0;32mI (1487) app_network: Provisioning will auto stop after 30 minute(s).[0m
+[0;32mI (9077) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (9087) wifi:station: 4e:da:61:ec:62:2d join, AID=1, bgn, 20[0m
+[0;32mI (9367) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (10427) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (10867) wifi:<ba-add>idx:2 (ifx:1, 4e:da:61:ec:62:2d), tid:0, ssn:16, winSize:64[0m
+[0;32mI (11037) security2: Using salt and verifier to generate public key...[0m
+[0;32mI (11327) app_network: Secured session established![0m
+[0;32mI (20037) esp_rmaker_user_mapping: Received request for node details[0m
+[0;32mI (20047) esp_rmaker_user_mapping: Got user_id = Google_104541177754461040966, secret_key = 2a31aadd-79eb-4209-9a37-4963c80c18d0[0m
+[0;32mI (20057) esp_rmaker_user_mapping: RainMaker config is not reported, waiting for the event before retrying user mapping.[0m
+[0;32mI (20067) esp_rmaker_user_mapping: Sending status SUCCESS[0m
+[0;33mW (20297) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (20327) app_wifi: Received Wi-Fi credentials[0m
+	SSID     : INTELBRAS
+	Password : lockinet.
+[0;32mI (24277) wifi:primary chan differ, old=1, new=5, start CSA timer[0m
+[0;32mI (24777) wifi:switch to channel 5[0m
+[0;32mI (24777) wifi:ap channel adjust o:1,1 n:5,1[0m
+[0;32mI (24777) wifi:new:<5,1>, old:<1,0>, ap:<5,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (24787) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (24787) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (24807) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (24837) wifi:connected with INTELBRAS, aid = 4, channel 5, 40U, bssid = 80:85:44:7d:0a:ee[0m
+[0;32mI (24847) wifi:security: WPA2-PSK, phy: bgn, rssi: -58, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (24867) wifi:pm start, type: 1[0m
+
+[0;32mI (24867) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (24887) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (25947) esp_netif_handlers: sta ip: 10.0.0.36, mask: 255.255.255.0, gw: 10.0.0.1[0m
+[0;32mI (25957) app_network: Connected with IP Address:10.0.0.36[0m
+[0;32mI (25957) network_prov_mgr: STA Got IP[0m
+[0;32mI (25957) app_wifi: Provisioning successful[0m
+[0;32mI (25957) esp_claim: Starting the Self Claim Process. This may take time.[0m
+[0;32mI (25957) main_task: Returned from app_main()[0m
+[0;32mI (25967) wifi:<ba-add>idx:0 (ifx:0, 80:85:44:7d:0a:ee), tid:0, ssn:0, winSize:64[0m
+[0;32mI (26567) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (27997) wifi:station: 4e:da:61:ec:62:2d leave, AID = 1, reason = 3, bss_flags is 33721443, bss:0x3ffe6394[0m
+[0;32mI (28007) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (28957) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (28977) wifi:mode : sta (68:67:25:2e:ee:10)[0m
+[0;32mI (28987) network_prov_mgr: Provisioning stopped[0m
+[0;32mI (31467) esp_claim: Self Claiming was successful. Certificate received.[0m
+[0;32mI (31477) esp_mqtt_glue: AWS PPI: ?Platform=APN3|A0|RM|EX00|RMDev|1x0|6867252EEE10[0m
+[0;32mI (31487) esp_mqtt_glue: Initialising MQTT[0m
+[0;32mI (31487) esp_mqtt_glue: MQTT LWT not configured[0m
+[0;32mI (31487) esp_rmaker_mqtt_budget: MQTT Budgeting initialised. Default: 100, Max: 1024, Revive count: 1, Revive period: 5[0m
+[0;32mI (31497) esp_rmaker_cmd_resp: Enabling Command-Response Module.[0m
+[0;32mI (31507) esp_rmaker_node: Node attribute cmd-resp created[0m
+[0;32mI (31507) esp_rmaker_param_cmd_resp: Enabling parameter command-response functionality[0m
+[0;32mI (31517) esp_rmaker_param_cmd_resp: Allocated 2048 bytes for command response buffer[0m
+[0;32mI (31527) esp_rmaker_common_cmd_resp: Registered command: cmd=1, access=7[0m
+[0;32mI (31537) esp_rmaker_param_cmd_resp: Registered standard set params command handler (id=1)[0m
+[0;32mI (31547) esp_mqtt_glue: Connecting to mqtt.rainmaker.espressif.com[0m
+[0;32mI (31557) esp_rmaker_core: Waiting for MQTT connection[0m
+[0;32mI (32047) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (33707) esp_mqtt_glue: MQTT Connected[0m
+[0;32mI (33707) esp_rmaker_cmd_resp: Checking for pending commands.[0m
+[0;32mI (33717) esp_rmaker_node_config: Generated Node config of length 1417[0m
+[0;32mI (33727) esp_rmaker_user_mapping: RainMaker config reported, queuing pending user mapping task.[0m
+[0;32mI (33737) esp_rmaker_user_mapping: Successfully queued user mapping task after RainMaker config reported.[0m
+[0;32mI (33727) esp_rmaker_core: User node mapping done, initializing MQTT parameters.[0m
+[0;32mI (33757) esp_rmaker_param: Params MQTT Init done.[0m
+[0;32mI (33757) esp_rmaker_param: Reporting params (init): {"Canal 1":{"Name":"Canal 1","Power":false},"Canal 2":{"Name":"Canal 2","Power":false},"Canal 3":{"Name":"Canal 3","Power":false},"Canal 4":{"Name":"Canal 4","Power":false}}[0m
+[0;32mI (33777) esp_rmaker_user_mapping: MQTT Publish: {"node_id":"6867252EEE10","user_id":"Google_104541177754461040966","secret_key":"2a31aadd-79eb-4209-9a37-4963c80c18d0"}[0m
+[0;32mI (33897) esp_rmaker_time: SNTP Synchronised.[0m
+[0;32mI (33897) esp_rmaker_time: The current time is: Sun Sep 20 04:06:22 2026 +0800[CST], DST: No.[0m
+[0;32mI (34017) esp_rmaker_user_mapping: User Node association message published successfully.[0m
+[0;32mI (49677) esp_rmaker_param: Received params: {"Canal 1":{"Power":true}}[0m
+[0;32mI (49687) esp_rmaker_param: Found 1 params in write request for Canal 1[0m
+[0;32mI (49697) ARQUITETURA_MULTI_CANAL: Comando da Alexa -> Pino: 12, Estado: 1[0m
+[0;33mW (49707) ARQUITETURA_MULTI_CANAL: Acionando Hardware -> GPIO 12 para HIGH[0m
+[0;32mI (49707) esp_rmaker_param: Reporting params: {"Canal 1":{"Power":true}}[0m
+[0;32mI (51317) esp_rmaker_param: Received params: {"Canal 1":{"Power":false}}[0m
+[0;32mI (51327) esp_rmaker_param: Found 1 params in write request for Canal 1[0m
+[0;32mI (51337) ARQUITETURA_MULTI_CANAL: Comando da Alexa -> Pino: 12, Estado: 0[0m
+[0;33mW (51347) ARQUITETURA_MULTI_CANAL: Acionando Hardware -> GPIO 12 para LOW[0m
+[0;32mI (51347) esp_rmaker_param: Reporting params: {"Canal 1":{"Power":false}}[0m
+[0;32mI (52237) esp_rmaker_param: Received params: {"Canal 2":{"Power":true}}[0m
+[0;32mI (52247) esp_rmaker_param: Found 1 params in write request for Canal 2[0m
+[0;32mI (52257) ARQUITETURA_MULTI_CANAL: Comando da Alexa -> Pino: 13, Estado: 1[0m
+[0;33mW (52267) ARQUITETURA_MULTI_CANAL: Acionando Hardware -> GPIO 13 para HIGH[0m
+[0;32mI (52267) esp_rmaker_param: Reporting params: {"Canal 2":{"Power":true}}[0m
+[0;32mI (53787) esp_rmaker_param: Received params: {"Canal 2":{"Power":false}}[0m
+[0;32mI (53797) esp_rmaker_param: Found 1 params in write request for Canal 2[0m
+[0;32mI (53807) ARQUITETURA_MULTI_CANAL: Comando da Alexa -> Pino: 13, Estado: 0[0m
+[0;33mW (53817) ARQUITETURA_MULTI_CANAL: Acionando Hardware -> GPIO 13 para LOW[0m
+[0;32mI (53817) esp_rmaker_param: Reporting params: {"Canal 2":{"Power":false}}[0m
+[0;32mI (54897) esp_rmaker_param: Received params: {"Canal 3":{"Power":true}}[0m
+[0;32mI (54907) esp_rmaker_param: Found 1 params in write request for Canal 3[0m
+[0;32mI (54917) ARQUITETURA_MULTI_CANAL: Comando da Alexa -> Pino: 14, Estado: 1[0m
+[0;33mW (54927) ARQUITETURA_MULTI_CANAL: Acionando Hardware -> GPIO 14 para HIGH[0m
+[0;32mI (54927) esp_rmaker_param: Reporting params: {"Canal 3":{"Power":true}}[0m
+[0;32mI (56327) esp_rmaker_param: Received params: {"Canal 3":{"Power":false}}[0m
+[0;32mI (56347) esp_rmaker_param: Found 1 params in write request for Canal 3[0m
+[0;32mI (56357) ARQUITETURA_MULTI_CANAL: Comando da Alexa -> Pino: 14, Estado: 0[0m
+[0;33mW (56367) ARQUITETURA_MULTI_CANAL: Acionando Hardware -> GPIO 14 para LOW[0m
+[0;32mI (56367) esp_rmaker_param: Reporting params: {"Canal 3":{"Power":false}}[0m
+[0;32mI (57767) esp_rmaker_param: Received params: {"Canal 4":{"Power":true}}[0m
+[0;32mI (57777) esp_rmaker_param: Found 1 params in write request for Canal 4[0m
+[0;32mI (57787) ARQUITETURA_MULTI_CANAL: Comando da Alexa -> Pino: 21, Estado: 1[0m
+[0;33mW (57797) ARQUITETURA_MULTI_CANAL: Acionando Hardware -> GPIO 21 para HIGH[0m
+[0;32mI (57797) esp_rmaker_param: Reporting params: {"Canal 4":{"Power":true}}[0m
+[0;32mI (59297) esp_rmaker_param: Received params: {"Canal 4":{"Power":false}}[0m
+[0;32mI (59307) esp_rmaker_param: Found 1 params in write request for Canal 4[0m
+[0;32mI (59317) ARQUITETURA_MULTI_CANAL: Comando da Alexa -> Pino: 21, Estado: 0[0m
+[0;33mW (59327) ARQUITETURA_MULTI_CANAL: Acionando Hardware -> GPIO 21 para LOW[0m
+[0;32mI (59327) esp_rmaker_param: Reporting params: {"Canal 4":{"Power":false}}[0m

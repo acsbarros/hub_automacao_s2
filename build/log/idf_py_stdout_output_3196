@@ -1,177 +1,38 @@
-Command: C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:\esp\v6.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s2-elf- --target esp32s2 --revision 0 C:\Users\UNILAB\Desktop\projetos-t\hub_automacao_s2\build\hub_automacao_s2.elf C:\Users\UNILAB\Desktop\projetos-t\hub_automacao_s2\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe' 'C:\esp\v6.1\esp-idf\tools\idf.py' '-p' 'COM7'
-[0;32mI (316) main_task: Started on CPU0[0m
-[0;32mI (316) main_task: Calling app_main()[0m
-[0;32mI (336) wifi:wifi driver task: 3ffd8974, prio:23, stack:6656, core=0[0m
-[0;32mI (346) wifi:wifi firmware version: e12a754[0m
-[0;32mI (346) wifi:wifi certification version: v7.0[0m
-[0;32mI (346) wifi:config NVS flash: enabled[0m
-[0;32mI (346) wifi:config nano formatting: disabled[0m
-[0;32mI (356) wifi:Init data frame dynamic rx buffer num: 32[0m
-[0;32mI (356) wifi:Init static rx mgmt buffer num: 5[0m
-[0;32mI (356) wifi:Init management short buffer num: 32[0m
-[0;32mI (356) wifi:Init dynamic tx buffer num: 32[0m
-[0;32mI (356) wifi:Init static rx buffer size: 1600[0m
-[0;32mI (356) wifi:Init static rx buffer num: 10[0m
-[0;32mI (356) wifi:Init dynamic rx buffer num: 32[0m
-[0;32mI (356) wifi_init: rx ba win: 6[0m
-[0;32mI (356) wifi_init: accept mbox: 6[0m
-[0;32mI (356) wifi_init: tcpip mbox: 32[0m
-[0;32mI (356) wifi_init: udp mbox: 6[0m
-[0;32mI (366) wifi_init: tcp mbox: 6[0m
-[0;32mI (366) wifi_init: tcp tx win: 5760[0m
-[0;32mI (366) wifi_init: tcp rx win: 5760[0m
-[0;32mI (366) wifi_init: tcp mss: 1440[0m
-[0;32mI (366) wifi_init: WiFi IRAM OP enabled[0m
-[0;32mI (366) wifi_init: WiFi RX IRAM OP enabled[0m
-[0;32mI (366) esp_rmaker_work_queue: Work Queue created.[0m
-[1;31mE (376) esp_rmaker_client_data: Failed to get client cert[0m
-[0;32mI (376) esp_claim: Initialising Self Claiming. This may take time.[0m
-[0;32mI (386) esp_claim: Private key already exists with matching type. No need to re-initialise it.[0m
-[0;32mI (1116) esp_rmaker_node: Node ID ----- 6867252EEE10[0m
-[0;32mI (1116) esp_rmaker_time: Initializing SNTP. Using the SNTP server: pool.ntp.org[0m
-[0;32mI (1126) esp_rmaker_core: Starting RainMaker Work Queue task[0m
-[0;32mI (1126) esp_rmaker_work_queue: RainMaker Work Queue task started.[0m
-[0;32mI (1126) app_network: Reusing cached sec2 salt-verifier from NVS[0m
-[0;32mI (1146) app_wifi: Starting provisioning[0m
-[0;32mI (1146) phy_init: phy_version 2623,ff3f498,Dec 17 2025,14:48:07[0m
-[0;32mI (1196) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
-[0;32mI (1226) wifi:mode : sta (68:67:25:2e:ee:10)[0m
-[0;32mI (1226) wifi:enable tsf[0m
-[0;32mI (1236) wifi:mode : sta (68:67:25:2e:ee:10) + softAP (68:67:25:2e:ee:11)[0m
-[0;32mI (1246) wifi:Total power save buffer number: 16[0m
-[0;32mI (1246) wifi:Init max length of beacon: 752/752[0m
-[0;32mI (1246) wifi:Init max length of beacon: 752/752[0m
-[0;32mI (1246) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
-[0;32mI (1246) wifi:Total power save buffer number: 16[0m
-[0;32mI (1256) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
-[0;32mI (1266) network_prov_mgr: Provisioning started with service name : PROV_33cf34 [0m
-[0;32mI (1276) app_wifi: Provisioning started[0m
-[0;32mI (1276) app_network: Scan this QR code from the ESP RainMaker phone app for Provisioning.[0m
-[0;32mI (1286) QRCODE: Encoding below text with ECC LVL 0 & QR Code Version 5[0m
-[0;32mI (1296) QRCODE: {"ver":"v1","name":"PROV_33cf34","username":"wifiprov","pop":"9bfb799e","transport":"softap"}[0m
-                                          
-  █▀▀▀▀▀█ █  ▄▄ ▀▀█▀▄▄▀▄▀▀▄▄▀▀  █▀▀▀▀▀█   
-  █ ███ █ ██▄ █▄█▄▀▀█▄▄▀▀█▄▄ ▄█ █ ███ █   
-  █ ▀▀▀ █ ▄██ ▀▀▀▀▀ ▀▄▀█▄▀ ▀█▀  █ ▀▀▀ █   
-  ▀▀▀▀▀▀▀ ▀ █▄▀ ▀ █▄█▄█▄▀▄▀ ▀▄▀ ▀▀▀▀▀▀▀   
-  ██ ▄▀▀▀▄  ▀ ▀▄ ▄ ▀█▀▄▀██▀▄ ▄▀▄ █▄▀▀▀▀   
-   ▀█ ▀█▀▀ ▀▀ ▄ ▀▀█▄ ▄ ▄▄▀▄ █▀▄██ ▀█▄█▄   
-   ▀ ▄▄▄▀ █▀ ▀▄▄▄█▀██▀▀▀ ▄▀▄ ▄▀ ▀█▄▀█▄▀   
-    █▄█▀▀█▄▄▄█▀ ▄▀██▀▄▄▄██▀▀▄▀▀█▄█ █▄     
-  ▄▀▀██ ▀▀ ▄  ▀▄ ▄ ▀█▀▀█ █▀▄▄▄▄██▀▄ ▀▀▀   
-  ▀ ▀▄▀▀▀█▀ ▄ ▄  █▀▄ ▄ █▄▀█ █▀▄█ █▄▀▄▄▄   
-  ██▀██ ▀ █▄▀▀▄▄█▄█▀ ▀▀▀ ▄ ▄ ▄▄██▀▄█▀█▀   
-  ▀▄█ █▀▀▄▄▀▄█▀▀ ▀██▀ ▀▄█▀ ▀ ▀▄█▄▀ █▄▄▄   
-  ▄█  ▄█▀ █▄  ▀  ▄█▀  ▄▀█▄█ ▄▄▀▀█▀▄▀▀ ▀   
-    ▄█▀ ▀  ▀▄ ▄ █▀ ▄ ▄ ██▀ ▀▀▀▄ █▄█▄█▀▄   
-  ▀▀▀   ▀▀▄ ▀▀▄▀██▄▀▄▀██▀█▄▄▄▄█▀▀▀█ ▀▄    
-  █▀▀▀▀▀█ ▄  █▀█▀███▄▄ ▄ ▀  ▄▄█ ▀ ██▄     
-  █ ███ █ ▀▀  ▀█▄▄██▄ ▄▀█▄█ ▄▄████▀▄██▄   
-  █ ▀▀▀ █ ▄▄█ ▄ ▄▀▄▄▀▄ ████ █ ▄  ▀▄██▄    
-  ▀▀▀▀▀▀▀ ▀  ▀ ▀▀ ▀▀ ▀▀▀  ▀  ▀   ▀▀ ▀▀▀   
-                                          
-
-[0;32mI (1586) app_network: If QR code is not visible, copy paste the below URL in a browser.[0m
-https://rainmaker.espressif.com/qrcode.html?data={"ver":"v1","name":"PROV_33cf34","username":"wifiprov","pop":"9bfb799e","transport":"softap"}
-[0;32mI (1606) app_network: Provisioning will auto stop after 30 minute(s).[0m
-[0;32mI (26066) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
-[0;32mI (26076) wifi:station: 6e:98:73:6b:36:48 join, AID=1, bgn, 20[0m
-[0;32mI (26316) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
-[0;32mI (26856) security2: Using salt and verifier to generate public key...[0m
-[0;32mI (27016) wifi:<ba-add>idx:2 (ifx:1, 6e:98:73:6b:36:48), tid:0, ssn:16, winSize:64[0m
-[0;32mI (27306) app_network: Secured session established![0m
-[0;32mI (35646) esp_rmaker_user_mapping: Received request for node details[0m
-[0;32mI (35656) esp_rmaker_user_mapping: Got user_id = Google_104541177754461040966, secret_key = a308fe70-3812-453b-8caa-0d510be9c8e8[0m
-[0;32mI (35666) esp_rmaker_user_mapping: RainMaker config is not reported, waiting for the event before retrying user mapping.[0m
-[0;32mI (35676) esp_rmaker_user_mapping: Sending status SUCCESS[0m
-[0;33mW (35756) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
-[0;32mI (35786) app_wifi: Received Wi-Fi credentials[0m
-	SSID     : INTELBRAS
-	Password : lockinet.
-[0;32mI (39736) wifi:primary chan differ, old=1, new=5, start CSA timer[0m
-[0;32mI (40156) wifi:switch to channel 5[0m
-[0;32mI (40156) wifi:ap channel adjust o:1,1 n:5,1[0m
-[0;32mI (40156) wifi:new:<5,1>, old:<1,0>, ap:<5,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
-[0;32mI (40166) wifi:state: init -> auth (0xb0)[0m
-[0;32mI (40176) wifi:state: auth -> assoc (0x0)[0m
-[0;32mI (40196) wifi:state: assoc -> run (0x10)[0m
-[0;32mI (40216) wifi:connected with INTELBRAS, aid = 4, channel 5, 40U, bssid = 80:85:44:7d:0a:ee[0m
-[0;32mI (40226) wifi:security: WPA2-PSK, phy: bgn, rssi: -63, cipher(pairwise:0x3, group:0x3), pmf:0[0m
-[0;32mI (40246) wifi:pm start, type: 1[0m
-
-[0;32mI (40246) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
-[0;32mI (40296) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
-[0;32mI (44666) esp_netif_handlers: sta ip: 10.0.0.36, mask: 255.255.255.0, gw: 10.0.0.1[0m
-[0;32mI (44676) app_network: Connected with IP Address:10.0.0.36[0m
-[0;32mI (44676) network_prov_mgr: STA Got IP[0m
-[0;32mI (44676) app_wifi: Provisioning successful[0m
-[0;32mI (44676) esp_claim: Starting the Self Claim Process. This may take time.[0m
-[0;32mI (44676) main_task: Returned from app_main()[0m
-[0;32mI (44686) wifi:<ba-add>idx:0 (ifx:0, 80:85:44:7d:0a:ee), tid:0, ssn:0, winSize:64[0m
-[0;32mI (44946) esp-x509-crt-bundle: Certificate validated[0m
-[0;32mI (47316) esp-x509-crt-bundle: Certificate validated[0m
-[0;32mI (50056) esp_claim: Self Claiming was successful. Certificate received.[0m
-[0;32mI (50066) esp_mqtt_glue: AWS PPI: ?Platform=APN3|A0|RM|EX00|RMDev|1x0|6867252EEE10[0m
-[0;32mI (50076) esp_mqtt_glue: Initialising MQTT[0m
-[0;32mI (50076) esp_mqtt_glue: MQTT LWT not configured[0m
-[0;32mI (50076) esp_rmaker_mqtt_budget: MQTT Budgeting initialised. Default: 100, Max: 1024, Revive count: 1, Revive period: 5[0m
-[0;32mI (50086) esp_rmaker_cmd_resp: Enabling Command-Response Module.[0m
-[0;32mI (50096) esp_rmaker_node: Node attribute cmd-resp created[0m
-[0;32mI (50096) esp_rmaker_param_cmd_resp: Enabling parameter command-response functionality[0m
-[0;32mI (50106) esp_rmaker_param_cmd_resp: Allocated 2048 bytes for command response buffer[0m
-[0;32mI (50116) esp_rmaker_common_cmd_resp: Registered command: cmd=1, access=7[0m
-[0;32mI (50126) esp_rmaker_param_cmd_resp: Registered standard set params command handler (id=1)[0m
-[0;32mI (50136) esp_mqtt_glue: Connecting to mqtt.rainmaker.espressif.com[0m
-[0;32mI (50146) esp_rmaker_core: Waiting for MQTT connection[0m
-[0;32mI (50636) esp-x509-crt-bundle: Certificate validated[0m
-[0;32mI (52286) esp_mqtt_glue: MQTT Connected[0m
-[0;32mI (52286) esp_rmaker_cmd_resp: Checking for pending commands.[0m
-[0;32mI (52296) esp_rmaker_node_config: Generated Node config of length 572[0m
-[0;32mI (52306) esp_rmaker_user_mapping: RainMaker config reported, queuing pending user mapping task.[0m
-[0;32mI (52316) esp_rmaker_user_mapping: Successfully queued user mapping task after RainMaker config reported.[0m
-[0;32mI (52306) esp_rmaker_core: User node mapping done, initializing MQTT parameters.[0m
-[0;32mI (52336) esp_rmaker_param: Params MQTT Init done.[0m
-[0;32mI (52336) esp_rmaker_param: Reporting params (init): {"Canal Principal":{"Name":"Canal Principal","Power":false}}[0m
-[0;32mI (52346) esp_rmaker_user_mapping: MQTT Publish: {"node_id":"6867252EEE10","user_id":"Google_104541177754461040966","secret_key":"a308fe70-3812-453b-8caa-0d510be9c8e8"}[0m
-[0;32mI (52656) esp_rmaker_user_mapping: User Node association message published successfully.[0m
-[0;32mI (75776) wifi:station: 6e:98:73:6b:36:48 leave, AID = 1, reason = 2, bss_flags is 33721459, bss:0x3ffe5fa8[0m
-[0;32mI (75786) wifi:<ba-del>idx:2, tid:0[0m
-[0;32mI (75786) wifi:mode : sta (68:67:25:2e:ee:10)[0m
-[0;32mI (75796) network_prov_mgr: Provisioning stopped[0m
-[0;32mI (75936) esp_rmaker_param: Received params: {"Canal Principal":{"Power":true}}[0m
-[0;32mI (75946) esp_rmaker_param: Found 1 params in write request for Canal Principal[0m
-[0;32mI (75956) ARQUITETURA_APP: Comando recebido da Nuvem: LIGAR[0m
-[0;33mW (75956) ARQUITETURA_APP: Hardware Real: Acionando Relés/Motores...[0m
-[0;32mI (75956) esp_rmaker_param: Reporting params: {"Canal Principal":{"Power":true}}[0m
-[0;32mI (77166) esp_rmaker_time: SNTP Synchronised.[0m
-[0;32mI (77166) esp_rmaker_time: The current time is: Sun Sep 20 03:33:38 2026 +0800[CST], DST: No.[0m
-[0;32mI (78806) esp_rmaker_param: Received params: {"Canal Principal":{"Power":false}}[0m
-[0;32mI (78816) esp_rmaker_param: Found 1 params in write request for Canal Principal[0m
-[0;32mI (78826) ARQUITETURA_APP: Comando recebido da Nuvem: DESLIGAR[0m
-[0;33mW (78826) ARQUITETURA_APP: Hardware Real: Desligando sistema em segurança...[0m
-[0;32mI (78826) esp_rmaker_param: Reporting params: {"Canal Principal":{"Power":false}}[0m
-[0;32mI (81776) esp_rmaker_param: Received params: {"Canal Principal":{"Power":true}}[0m
-[0;32mI (81786) esp_rmaker_param: Found 1 params in write request for Canal Principal[0m
-[0;32mI (81796) ARQUITETURA_APP: Comando recebido da Nuvem: LIGAR[0m
-[0;33mW (81796) ARQUITETURA_APP: Hardware Real: Acionando Relés/Motores...[0m
-[0;32mI (81796) esp_rmaker_param: Reporting params: {"Canal Principal":{"Power":true}}[0m
-[0;32mI (179566) esp_rmaker_param: Received params: {"Canal Principal":{"Power":true}}[0m
-[0;32mI (179576) esp_rmaker_param: Found 1 params in write request for Canal Principal[0m
-[0;32mI (179586) ARQUITETURA_APP: Comando recebido da Nuvem: LIGAR[0m
-[0;33mW (179586) ARQUITETURA_APP: Hardware Real: Acionando Relés/Motores...[0m
-[0;32mI (179586) esp_rmaker_param: Reporting params: {"Canal Principal":{"Power":true}}[0m
-[0;32mI (181816) esp_rmaker_param: Received params: {"Canal Principal":{"Power":false}}[0m
-[0;32mI (181826) esp_rmaker_param: Found 1 params in write request for Canal Principal[0m
-[0;32mI (181836) ARQUITETURA_APP: Comando recebido da Nuvem: DESLIGAR[0m
-[0;33mW (181846) ARQUITETURA_APP: Hardware Real: Desligando sistema em segurança...[0m
-[0;32mI (181846) esp_rmaker_param: Reporting params: {"Canal Principal":{"Power":false}}[0m
-[0;32mI (191656) esp_rmaker_param: Received params: {"Canal Principal":{"Power":true}}[0m
-[0;32mI (191666) esp_rmaker_param: Found 1 params in write request for Canal Principal[0m
-[0;32mI (191676) ARQUITETURA_APP: Comando recebido da Nuvem: LIGAR[0m
-[0;33mW (191676) ARQUITETURA_APP: Hardware Real: Acionando Relés/Motores...[0m
-[0;32mI (191676) esp_rmaker_param: Reporting params: {"Canal Principal":{"Power":true}}[0m
-[0;32mI (193076) esp_rmaker_param: Received params: {"Canal Principal":{"Power":false}}[0m
-[0;32mI (193096) esp_rmaker_param: Found 1 params in write request for Canal Principal[0m
-[0;32mI (193106) ARQUITETURA_APP: Comando recebido da Nuvem: DESLIGAR[0m
-[0;33mW (193116) ARQUITETURA_APP: Hardware Real: Desligando sistema em segurança...[0m
-[0;32mI (193116) esp_rmaker_param: Reporting params: {"Canal Principal":{"Power":false}}[0m
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\UNILAB\Desktop\projetos-t\hub_automacao_s2\build\bootloader && C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:/esp/v6.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/UNILAB/Desktop/projetos-t/hub_automacao_s2/build/bootloader/bootloader.bin"
+Bootloader binary size 0x4ff0 bytes. 0x2010 bytes (29%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/hub_automacao_s2.c.obj
+[5/9] Linking C static library esp-idf\main\libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+NOTE: C:/esp/v6.1/esp-idf/components/bt/host/nimble/Kconfig.in:1428: 
+BT_NIMBLE_MESH_PROVISIONER: 'default 0' is not a valid bool value (only 'y' and
+'n' are allowed). Value is treated as 'n'.
+NOTE: C:/esp/v6.1/esp-idf/components/fatfs/Kconfig:240: FATFS_PRINT_LLI: 
+'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is 
+treated as 'n'.
+NOTE: C:/esp/v6.1/esp-idf/components/fatfs/Kconfig:245: FATFS_PRINT_FLOAT: 
+'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is 
+treated as 'n'.
+NOTE: 
+C:/Users/UNILAB/Desktop/projetos-t/hub_automacao_s2/managed_components/espressi
+f__esp_diag_data_store/Kconfig:25: DIAG_DATA_STORE_DBG_PRINTS: 'default false' 
+is not a valid bool value (only 'y' and 'n' are allowed). Value is treated as 
+'n'.
+NOTE: 
+C:/Users/UNILAB/Desktop/projetos-t/hub_automacao_s2/managed_components/espressi
+f__rmaker_common/Kconfig:113: ESP_RMAKER_ENCRYPT_FACTORY_PARTITION: 'default 
+false' is not a valid bool value (only 'y' and 'n' are allowed). Value is 
+treated as 'n'.
+Skipping linker fragment parsing, fragment files unchanged
+[7/9] Linking CXX executable hub_automacao_s2.elf
+[8/9] Generating binary image from built executable
+esptool v5.3.1
+Creating ESP32-S2 image...
+Merged 3 ELF sections.
+Successfully created ESP32-S2 image.
+Generated C:/Users/UNILAB/Desktop/projetos-t/hub_automacao_s2/build/hub_automacao_s2.bin
+[9/9] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\UNILAB\Desktop\projetos-t\hub_automacao_s2\build && C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:/esp/v6.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/UNILAB/Desktop/projetos-t/hub_automacao_s2/build/partition_table/partition-table.bin C:/Users/UNILAB/Desktop/projetos-t/hub_automacao_s2/build/hub_automacao_s2.bin"
+hub_automacao_s2.bin binary size 0x121a70 bytes. Smallest app partition is 0x177000 bytes. 0x55590 bytes (23%) free.

@@ -16,107 +16,101 @@
 #include "driver/gpio.h"
 
 
+static const char *TAG = "ARQUITETURA_MULTI_CANAL";
 
-static const char *TAG = "ARQUITETURA_APP";
+// 1. Definição do Hardware Físico (Mapeamento de Pinos)
+#define NUM_CANAIS 4
+const uint8_t pinos_saida[NUM_CANAIS] = {12, 13, 14, 21}; // GPIOs do ESP32-S2
 
-// Handle da tarefa de controle para receber notificações do RainMaker
-TaskHandle_t control_task_handle = NULL;
+// 2. Estrutura de Mensagem para o FreeRTOS
+typedef struct {
+    uint8_t gpio_num;
+    bool estado;
+} comando_hw_t;
 
-// Sinais de comando IPC (Inter-Process Communication)
-#define CMD_TURN_ON  0x01
-#define CMD_TURN_OFF 0x02
-
-#define LED_GPIO     13
-
-
-// ============================================================
-// LED
-// ============================================================
-static void init_led(void)
-{
-    gpio_reset_pin(LED_GPIO);
-    gpio_set_direction(LED_GPIO, GPIO_MODE_OUTPUT);
-    gpio_set_level(LED_GPIO, 0);
-    ESP_LOGI(TAG, "LED inicializado no GPIO %d", LED_GPIO);
-}
-
-
+// Fila para comunicar a Nuvem com o Hardware
+QueueHandle_t fila_comandos = NULL;
 
 /* 
- * 1. CAMADA DE REDE (Callback da Nuvem/Alexa)
- * Regra: NUNCA execute bloqueios ou delays aqui. Apenas sinalize a Task.
+ * CAMADA DE REDE: Único Callback para todos os pinos.
+ * Como ele sabe qual pino acionar? Lendo o ponteiro priv_data!
  */
 esp_err_t alexa_write_callback(const esp_rmaker_device_t *device, const esp_rmaker_param_t *param,
                                const esp_rmaker_param_val_t val, void *priv_data, esp_rmaker_write_ctx_t *ctx)
 {
     if (strcmp(esp_rmaker_param_get_name(param), ESP_RMAKER_DEF_POWER_NAME) == 0) {
-        bool power_state = val.val.b;
-        ESP_LOGI(TAG, "Comando recebido da Nuvem: %s", power_state ? "LIGAR" : "DESLIGAR");
         
-        // Dispara o sinal para a malha de controle assumir o hardware
-        uint32_t cmd = power_state ? CMD_TURN_ON : CMD_TURN_OFF;
-        xTaskNotify(control_task_handle, cmd, eSetValueWithOverwrite);
+        // Extrai o pino associado a este dispositivo virtual
+        uint8_t pino_alvo = (uint8_t)(uint32_t)priv_data;
+        bool ligar = val.val.b;
         
-        // Confirma o estado para a AWS/Alexa
+        ESP_LOGI(TAG, "Comando da Alexa -> Pino: %d, Estado: %d", pino_alvo, ligar);
+        
+        // Embala a mensagem e despacha para a fila
+        comando_hw_t msg = { .gpio_num = pino_alvo, .estado = ligar };
+        xQueueSend(fila_comandos, &msg, portMAX_DELAY);
+        
+        // Confirma o recebimento para a AWS
         esp_rmaker_param_update_and_report(param, val);
     }
     return ESP_OK;
 }
 
 /* 
- * 2. CAMADA DE CONTROLE (RTOS Task)
- * Processa o estado físico, aciona GPIOs, PWM, Controladores PID, etc.
+ * CAMADA DE CONTROLE: Processa os comandos físicos
  */
 void control_loop_task(void *pvParameters)
 {
-    uint32_t command;
+    comando_hw_t comando_recebido;
+    
     while (1) {
-        // Aguarda ordens sem consumir ciclos de CPU (bloqueio determinístico)
-        if (xTaskNotifyWait(0x00, ULONG_MAX, &command, portMAX_DELAY) == pdTRUE) {
-            if (command == CMD_TURN_ON) {
-                ESP_LOGW(TAG, "Hardware Real: Acionando Relés/Motores...");
-                 gpio_set_level(LED_GPIO, 1);
-            } else if (command == CMD_TURN_OFF) {
-                ESP_LOGW(TAG, "Hardware Real: Desligando sistema em segurança...");
-                 gpio_set_level(LED_GPIO, 0);
-            }
+        // Fica bloqueado aguardando comandos da Nuvem (zero consumo de CPU)
+        if (xQueueReceive(fila_comandos, &comando_recebido, portMAX_DELAY) == pdTRUE) {
+            ESP_LOGW(TAG, "Acionando Hardware -> GPIO %d para %s", 
+                     comando_recebido.gpio_num, comando_recebido.estado ? "HIGH" : "LOW");
+                     
+            gpio_set_level(comando_recebido.gpio_num, comando_recebido.estado);
         }
     }
 }
 
 /* 
- * 3. BOOTSTRAP (Main)
+ * BOOTSTRAP
  */
 void app_main(void)
 {
-    init_led();
-    
-    // 1. Inicializa Memória Não Volátil (Obrigatório)
-    esp_err_t err = nvs_flash_init();
-    if (err == ESP_ERR_NVS_NO_FREE_PAGES || err == ESP_ERR_NVS_NEW_VERSION_FOUND) {
-        ESP_ERROR_CHECK(nvs_flash_erase());
-        err = nvs_flash_init();
+    ESP_ERROR_CHECK(nvs_flash_init());
+
+    // Inicializa a Fila e a Tarefa do FreeRTOS
+    fila_comandos = xQueueCreate(10, sizeof(comando_hw_t));
+    xTaskCreate(control_loop_task, "ctrl_loop", 4096, NULL, configMAX_PRIORITIES - 1, NULL);
+
+    // Inicializa os pinos físicos como Saída
+    for (int i = 0; i < NUM_CANAIS; i++) {
+        gpio_reset_pin(pinos_saida[i]);
+        gpio_set_direction(pinos_saida[i], GPIO_MODE_OUTPUT);
+        gpio_set_level(pinos_saida[i], 0); // Começa desligado
     }
-    ESP_ERROR_CHECK(err);
 
-    // 2. Cria a Task de Controle ANTES da rede iniciar
-    xTaskCreate(control_loop_task, "ctrl_loop", 4096, NULL, configMAX_PRIORITIES - 1, &control_task_handle);
-
-    // 3. Inicializa Conectividade Básica
     app_wifi_init();
 
-    // 4. Configuração do Nó RainMaker (Device Shadow na AWS)
-    esp_rmaker_config_t rainmaker_cfg = {
-        .enable_time_sync = true,
-    };
-    esp_rmaker_node_t *node = esp_rmaker_node_init(&rainmaker_cfg, "Hub ESP32-S2", "Automação");
+    esp_rmaker_config_t rainmaker_cfg = { .enable_time_sync = true };
+    esp_rmaker_node_t *node = esp_rmaker_node_init(&rainmaker_cfg, "Hub Multi-Canais", "Automação");
 
-    // 5. Cria o Dispositivo "Interruptor" que a Alexa irá reconhecer
-    esp_rmaker_device_t *switch_device = esp_rmaker_switch_device_create("Canal Principal", NULL, false);
-    esp_rmaker_device_add_cb(switch_device, alexa_write_callback, NULL);
-    esp_rmaker_node_add_device(node, switch_device);
+    // Cria os Dispositivos Virtuais dinamicamente
+    for (int i = 0; i < NUM_CANAIS; i++) {
+        char nome_dispositivo[32];
+        sprintf(nome_dispositivo, "Canal %d", i + 1); // Ex: "Canal 1", "Canal 2"...
 
-    // 6. Inicia o Serviço de Nuvem e Provisionamento
+        // O 'priv_data' é a nossa âncora: passamos o GPIO correspondente para o Callback
+        esp_rmaker_device_t *device = esp_rmaker_switch_device_create(nome_dispositivo, 
+                                                                     (void *)(uint32_t)pinos_saida[i], 
+                                                                     false);
+        
+        esp_rmaker_device_add_cb(device, alexa_write_callback, NULL);
+        esp_rmaker_node_add_device(node, device);
+    }
+
     esp_rmaker_start();
-    app_wifi_start(POP_TYPE_RANDOM);
+    app_wifi_start(POP_TYPE_MAC); // Usando MAC para produção!
 }
