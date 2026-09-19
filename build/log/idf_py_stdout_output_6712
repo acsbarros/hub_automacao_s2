@@ -1,0 +1,123 @@
+Command: C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:\esp\v6.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s2-elf- --target esp32s2 --revision 0 C:\Users\UNILAB\Desktop\projetos-t\hub_automacao_s2\build\hub_automacao_s2.elf C:\Users\UNILAB\Desktop\projetos-t\hub_automacao_s2\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe' 'C:\esp\v6.1\esp-idf\tools\idf.py' '-p' 'COM7'
+[0;32mI (318) main_task: Started on CPU0[0m
+[0;32mI (318) main_task: Calling app_main()[0m
+[0;32mI (338) wifi:wifi driver task: 3ffd8880, prio:23, stack:6656, core=0[0m
+[0;32mI (348) wifi:wifi firmware version: e12a754[0m
+[0;32mI (348) wifi:wifi certification version: v7.0[0m
+[0;32mI (348) wifi:config NVS flash: enabled[0m
+[0;32mI (358) wifi:config nano formatting: disabled[0m
+[0;32mI (358) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (358) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (358) wifi:Init management short buffer num: 32[0m
+[0;32mI (358) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (358) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (358) wifi:Init static rx buffer num: 10[0m
+[0;32mI (358) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (358) wifi_init: rx ba win: 6[0m
+[0;32mI (358) wifi_init: accept mbox: 6[0m
+[0;32mI (358) wifi_init: tcpip mbox: 32[0m
+[0;32mI (358) wifi_init: udp mbox: 6[0m
+[0;32mI (358) wifi_init: tcp mbox: 6[0m
+[0;32mI (358) wifi_init: tcp tx win: 5760[0m
+[0;32mI (358) wifi_init: tcp rx win: 5760[0m
+[0;32mI (358) wifi_init: tcp mss: 1440[0m
+[0;32mI (358) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (358) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (368) esp_rmaker_work_queue: Work Queue created.[0m
+[1;31mE (368) esp_rmaker_client_data: Failed to get client cert[0m
+[0;32mI (368) esp_claim: Initialising Self Claiming. This may take time.[0m
+[0;32mI (378) esp_claim: Private key already exists with matching type. No need to re-initialise it.[0m
+[0;32mI (1048) esp_rmaker_work_queue: esp_rmaker_work_queue was successfully deinitialized[0m
+[1;31mE (1058) esp_rmaker_core: Challenge Response is incompatible with self claiming. Please disable self claiming or disable challenge response.[0m
+[1;31mE (1068) esp_rmaker_core: Self claiming is needed because device certificates are not found or device is not claimed yet.[0m
+[1;31mE (1078) esp_rmaker_node: Node or Device/Service handle cannot be NULL.[0m
+[1;31mE (1088) esp_rmaker_core: ESP RainMaker not initialised[0m
+[0;32mI (1088) app_network: Reusing cached sec2 salt-verifier from NVS[0m
+[0;32mI (1098) app_wifi: Starting provisioning[0m
+[0;32mI (1098) phy_init: phy_version 2623,ff3f498,Dec 17 2025,14:48:07[0m
+[0;32mI (1148) wifi:mode : sta (68:67:25:2e:ee:10)[0m
+[0;32mI (1148) wifi:enable tsf[0m
+[0;32mI (1158) wifi:mode : sta (68:67:25:2e:ee:10) + softAP (68:67:25:2e:ee:11)[0m
+[0;32mI (1168) wifi:Total power save buffer number: 16[0m
+[0;32mI (1168) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1168) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1168) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1168) wifi:Total power save buffer number: 16[0m
+[0;32mI (1178) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1188) network_prov_mgr: Provisioning started with service name : PROV_0d2b67 [0m
+[0;32mI (1198) app_wifi: Provisioning started[0m
+[0;32mI (1198) app_network: Scan this QR code from the ESP RainMaker phone app for Provisioning.[0m
+[0;32mI (1208) QRCODE: Encoding below text with ECC LVL 0 & QR Code Version 5[0m
+[0;32mI (1218) QRCODE: {"ver":"v1","name":"PROV_0d2b67","username":"wifiprov","pop":"daf549da","transport":"softap"}[0m
+                                          
+  █▀▀▀▀▀█ ▀▀▀█▄ ▀ ▄▀▀▄ █  ▄▄▀ ▀ █▀▀▀▀▀█   
+  █ ███ █  ▀▄█ █▀ ▀▄▀█ █▀ ▀█▄ █ █ ███ █   
+  █ ▀▀▀ █  ▄▀█▀▄█ ███▀▀▄ ▄ ▄▀   █ ▀▀▀ █   
+  ▀▀▀▀▀▀▀ █▄▀ █▄█▄▀ ▀▄▀ █ █▄█▄█ ▀▀▀▀▀▀▀   
+  ▀▀▄▀█ ▀ ▄█▄ ▀ ▀██▀███  █▀ ▀█▄▄▀ ▄ ▄ ▀   
+    ▄▄█▄▀██▀  ▀  █▄▄█ ▄ █▀▀ ▄█ █   ▀██▀   
+  ▀ ▄█  ▀▄▀▄  ▄▄▄▄ ▄█▀▄ ▀█▀▄ █ ▀▀█▄ ▄█▀   
+    ▄▄ ▀▀█ ▀▄ ▄▀ ██ ▄█  █ ▄  ██ ▀▄▄▀▄██   
+  ▄ ▀▄█▄▀▀▄▄▄█▀▀▄█▄▄█▄█▄▄ ▀▀ █  █▄ ▀█▄▀   
+  ▀  ███▀▀ ▀▀▄▀██▀█ ██▄▀ █ █ █▀▀█ ▀█  ▀   
+   ▄█ ▄▄▀█ █ ▀▄ ▄█ ▀ █  █▄  ▀█▄████▄▄█▀   
+   █  █▀▀▀ ███▄▀▀█▄█▄ █ ▄▀█▀▀▀ █▀▀▀▀█▄▀   
+  █▀▄▀▀█▀   █▀▀  █▄  ▀▀ ▄██ ▄██ █▀▄  ▀▀   
+  █▀▄  ▀▀▄▄▄ █▀▀▀█ ▀██▄▀█▄█ █▀██ █▀ █▄▀   
+  ▀ ▀▀▀ ▀▀▄▄█▄▄▄▀▄ ▄▄▄▀▄█ ▄▀ ██▀▀▀█▀█▀    
+  █▀▀▀▀▀█  ▄▀▀▄ ▄▀▀▀▀▀█ ▄███▀ █ ▀ █▀ ▄█   
+  █ ███ █ █ ▀ ▀▀██ █▄▄█  ▄█▄██▀██▀▀█ █▄   
+  █ ▀▀▀ █ ▄██ ▀ ███▄▄▄▀▀▄█  ▄▄█ █▀█▀▄▄█   
+  ▀▀▀▀▀▀▀ ▀ ▀  ▀▀▀   ▀▀ ▀▀▀   ▀▀ ▀▀▀  ▀   
+                                          
+
+[0;32mI (1508) app_network: If QR code is not visible, copy paste the below URL in a browser.[0m
+https://rainmaker.espressif.com/qrcode.html?data={"ver":"v1","name":"PROV_0d2b67","username":"wifiprov","pop":"daf549da","transport":"softap"}
+[0;32mI (1538) app_network: Provisioning will auto stop after 30 minute(s).[0m
+[0;32mI (223688) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (223698) wifi:station: be:81:61:c8:df:b4 join, AID=1, bgn, 20[0m
+[0;32mI (241828) wifi:station: be:81:61:c8:df:b4 leave, AID = 1, reason = 3, bss_flags is 33721443, bss:0x3ffe3500[0m
+[0;32mI (241838) wifi:new:<1,1>, old:<1,0>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (245028) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (245038) wifi:station: be:81:61:c8:df:b4 join, AID=1, bgn, 20[0m
+[0;32mI (245138) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (245688) security2: Using salt and verifier to generate public key...[0m
+[0;32mI (245878) wifi:<ba-add>idx:2 (ifx:1, be:81:61:c8:df:b4), tid:0, ssn:16, winSize:64[0m
+[0;32mI (246008) app_network: Secured session established![0m
+[0;33mW (273118) httpd_uri: httpd_uri: URI '/cloud_user_assoc' not found[0m
+[0;33mW (273128) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (275918) wifi:station: be:81:61:c8:df:b4 leave, AID = 1, reason = 3, bss_flags is 33721459, bss:0x3ffe3500[0m
+[0;32mI (275928) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (275928) wifi:new:<1,1>, old:<1,0>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (283688) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (283698) wifi:station: be:81:61:c8:df:b4 join, AID=1, bgn, 20[0m
+[0;32mI (284008) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;33mW (284598) security2: Invalid state of session 0 (expected 2). Restarting session.[0m
+[1;31mE (284608) security2: Closing old session with id 2749696833[0m
+[0;32mI (284608) security2: Using salt and verifier to generate public key...[0m
+[0;32mI (284658) wifi:<ba-add>idx:2 (ifx:1, be:81:61:c8:df:b4), tid:0, ssn:16, winSize:64[0m
+[0;32mI (285068) app_network: Secured session established![0m
+[0;33mW (422488) httpd_uri: httpd_uri: URI '/cloud_user_assoc' not found[0m
+[0;33mW (422498) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (430968) wifi:station: be:81:61:c8:df:b4 leave, AID = 1, reason = 3, bss_flags is 33721459, bss:0x3ffe3500[0m
+[0;32mI (430978) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (430978) wifi:new:<1,1>, old:<1,0>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (449248) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (449258) wifi:station: be:81:61:c8:df:b4 join, AID=1, bgn, 20[0m
+[0;32mI (450488) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (451428) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (453588) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (457518) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (458038) wifi:<ba-add>idx:2 (ifx:1, be:81:61:c8:df:b4), tid:0, ssn:16, winSize:64[0m
+[0;33mW (458788) security2: Invalid state of session 0 (expected 2). Restarting session.[0m
+[1;31mE (458798) security2: Closing old session with id 2749696833[0m
+[0;32mI (458798) security2: Using salt and verifier to generate public key...[0m
+[0;32mI (459158) app_network: Secured session established![0m
+[0;32mI (462778) wifi:[ADDBA]RX DELBA, reason:1, delete tid:0, initiator:1(originator)[0m
+[0;32mI (462788) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (462788) wifi:<ba-add>idx:2 (ifx:1, be:81:61:c8:df:b4), tid:0, ssn:37, winSize:64[0m
+[0;33mW (505168) httpd_uri: httpd_uri: URI '/cloud_user_assoc' not found[0m
+[0;33mW (505178) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (515448) wifi:station: be:81:61:c8:df:b4 leave, AID = 1, reason = 3, bss_flags is 33721459, bss:0x3ffe3500[0m
+[0;32mI (515458) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (515458) wifi:new:<1,1>, old:<1,0>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m

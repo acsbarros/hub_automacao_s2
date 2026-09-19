@@ -1,0 +1,27 @@
+CONFIG_IDF_TARGET="esp32s2"
+CONFIG_ESP_CONSOLE_USB_CDC=y
+CONFIG_CONSOLE_UART_NUM=-1
+CONFIG_BOOTLOADER_LOG_LEVEL_WARN=y
+CONFIG_BOOTLOADER_LOG_LEVEL=2
+CONFIG_DEBUG=y
+CONFIG_FREQUENCIA_DE_INICIALIZACAO=5
+CONFIG_NOME_DO_PROJETO = "Projeto do Carlos"
+# =========================================================
+# Configurações de Provisionamento Wi-Fi (RainMaker)
+# =========================================================
+# Força o uso de SoftAP (Obrigatório para ESP32-S2, que não possui rádio Bluetooth)
+CONFIG_APP_WIFI_PROV_TRANSPORT_SOFTAP=y
+
+# =========================================================
+# Configurações de Sistema e FreeRTOS
+# =========================================================
+# Aumenta a stack da Main Task para suportar a carga de criptografia TLS/SSL da AWS
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
+
+# =========================================================
+# Tabela de Partições Customizada
+# =========================================================
+# Aponta o Kconfig para usar o partitions.csv no lugar da tabela padrão
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+CONFIG_PARTITION_TABLE_FILENAME="partitions.csv"

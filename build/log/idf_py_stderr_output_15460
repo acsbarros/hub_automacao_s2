@@ -1,0 +1,1 @@
+Command: C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe -m esptool -p COM7 -b 460800 --before default-reset --after hard-reset --chip esp32s2 erase-flash

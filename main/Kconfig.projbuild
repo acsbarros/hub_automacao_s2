@@ -1,0 +1,25 @@
+menu "Menu Personalizado"
+    config NOME_DO_PROJETO
+        string "Nome do Projeto"
+        default "Meu projeto APS"
+        help
+            Preencha o nome do projeto
+
+    choice MY_CHOICE
+        prompt "Selecionar uma opcao"
+        default DEBUG
+
+        config DEBUG
+            bool "Habilitar o modo DEBUG"
+
+        config HOMOLOGACAO
+            bool "Habilitar o modo homologacao"
+
+        config PRODUCAO
+            bool "Habilitar o modo PRODUCAO"
+    endchoice
+
+    config FREQUENCIA_DE_ATUALIZACAO
+        int "valor inteiro"
+        range 1 30
+endmenu

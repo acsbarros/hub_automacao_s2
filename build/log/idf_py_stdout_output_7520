@@ -1,0 +1,80 @@
+Command: C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:\esp\v6.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s2-elf- --target esp32s2 --revision 0 C:\Users\UNILAB\Desktop\projetos-t\hub_automacao_s2\build\hub_automacao_s2.elf C:\Users\UNILAB\Desktop\projetos-t\hub_automacao_s2\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe' 'C:\esp\v6.1\esp-idf\tools\idf.py' '-p' 'COM7'
+[0;32mI (601098) wifi:flush txq[0m
+[0;32mI (601098) wifi:stop sw txq[0m
+[0;32mI (601098) wifi:lmac stop hw txq[0m
+[0;32mI (318) main_task: Started on CPU0[0m
+[0;32mI (318) main_task: Calling app_main()[0m
+[0;32mI (338) wifi:wifi driver task: 3ffd8880, prio:23, stack:6656, core=0[0m
+[0;32mI (348) wifi:wifi firmware version: e12a754[0m
+[0;32mI (348) wifi:wifi certification version: v7.0[0m
+[0;32mI (348) wifi:config NVS flash: enabled[0m
+[0;32mI (358) wifi:config nano formatting: disabled[0m
+[0;32mI (358) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (358) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (358) wifi:Init management short buffer num: 32[0m
+[0;32mI (358) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (358) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (358) wifi:Init static rx buffer num: 10[0m
+[0;32mI (358) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (358) wifi_init: rx ba win: 6[0m
+[0;32mI (358) wifi_init: accept mbox: 6[0m
+[0;32mI (358) wifi_init: tcpip mbox: 32[0m
+[0;32mI (358) wifi_init: udp mbox: 6[0m
+[0;32mI (358) wifi_init: tcp mbox: 6[0m
+[0;32mI (358) wifi_init: tcp tx win: 5760[0m
+[0;32mI (358) wifi_init: tcp rx win: 5760[0m
+[0;32mI (358) wifi_init: tcp mss: 1440[0m
+[0;32mI (358) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (358) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (368) esp_rmaker_work_queue: Work Queue created.[0m
+[1;31mE (368) esp_rmaker_client_data: Failed to get client cert[0m
+[0;32mI (368) esp_claim: Initialising Self Claiming. This may take time.[0m
+[0;32mI (378) esp_claim: Private key already exists with matching type. No need to re-initialise it.[0m
+[0;32mI (1048) esp_rmaker_work_queue: esp_rmaker_work_queue was successfully deinitialized[0m
+[1;31mE (1058) esp_rmaker_core: Challenge Response is incompatible with self claiming. Please disable self claiming or disable challenge response.[0m
+[1;31mE (1068) esp_rmaker_core: Self claiming is needed because device certificates are not found or device is not claimed yet.[0m
+[1;31mE (1078) esp_rmaker_node: Node or Device/Service handle cannot be NULL.[0m
+[1;31mE (1088) esp_rmaker_core: ESP RainMaker not initialised[0m
+[0;32mI (1088) app_network: Reusing cached sec2 salt-verifier from NVS[0m
+[0;32mI (1098) app_wifi: Starting provisioning[0m
+[0;32mI (1098) phy_init: phy_version 2623,ff3f498,Dec 17 2025,14:48:07[0m
+[0;32mI (1148) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (1178) wifi:mode : sta (68:67:25:2e:ee:10)[0m
+[0;32mI (1178) wifi:enable tsf[0m
+[0;32mI (1188) wifi:mode : sta (68:67:25:2e:ee:10) + softAP (68:67:25:2e:ee:11)[0m
+[0;32mI (1198) wifi:Total power save buffer number: 16[0m
+[0;32mI (1198) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1198) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1198) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1198) wifi:Total power save buffer number: 16[0m
+[0;32mI (1208) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1218) network_prov_mgr: Provisioning started with service name : PROV_0d2b67 [0m
+[0;32mI (1228) app_wifi: Provisioning started[0m
+[0;32mI (1228) app_network: Scan this QR code from the ESP RainMaker phone app for Provisioning.[0m
+[0;32mI (1238) QRCODE: Encoding below text with ECC LVL 0 & QR Code Version 5[0m
+[0;32mI (1248) QRCODE: {"ver":"v1","name":"PROV_0d2b67","username":"wifiprov","pop":"daf549da","transport":"softap"}[0m
+                                          
+  █▀▀▀▀▀█ ▀▀▀█▄ ▀ ▄▀▀▄ █  ▄▄▀ ▀ █▀▀▀▀▀█   
+  █ ███ █  ▀▄█ █▀ ▀▄▀█ █▀ ▀█▄ █ █ ███ █   
+  █ ▀▀▀ █  ▄▀█▀▄█ ███▀▀▄ ▄ ▄▀   █ ▀▀▀ █   
+  ▀▀▀▀▀▀▀ █▄▀ █▄█▄▀ ▀▄▀ █ █▄█▄█ ▀▀▀▀▀▀▀   
+  ▀▀▄▀█ ▀ ▄█▄ ▀ ▀██▀███  █▀ ▀█▄▄▀ ▄ ▄ ▀   
+    ▄▄█▄▀██▀  ▀  █▄▄█ ▄ █▀▀ ▄█ █   ▀██▀   
+  ▀ ▄█  ▀▄▀▄  ▄▄▄▄ ▄█▀▄ ▀█▀▄ █ ▀▀█▄ ▄█▀   
+    ▄▄ ▀▀█ ▀▄ ▄▀ ██ ▄█  █ ▄  ██ ▀▄▄▀▄██   
+  ▄ ▀▄█▄▀▀▄▄▄█▀▀▄█▄▄█▄█▄▄ ▀▀ █  █▄ ▀█▄▀   
+  ▀  ███▀▀ ▀▀▄▀██▀█ ██▄▀ █ █ █▀▀█ ▀█  ▀   
+   ▄█ ▄▄▀█ █ ▀▄ ▄█ ▀ █  █▄  ▀█▄████▄▄█▀   
+   █  █▀▀▀ ███▄▀▀█▄█▄ █ ▄▀█▀▀▀ █▀▀▀▀█▄▀   
+  █▀▄▀▀█▀   █▀▀  █▄  ▀▀ ▄██ ▄██ █▀▄  ▀▀   
+  █▀▄  ▀▀▄▄▄ █▀▀▀█ ▀██▄▀█▄█ █▀██ █▀ █▄▀   
+  ▀ ▀▀▀ ▀▀▄▄█▄▄▄▀▄ ▄▄▄▀▄█ ▄▀ ██▀▀▀█▀█▀    
+  █▀▀▀▀▀█  ▄▀▀▄ ▄▀▀▀▀▀█ ▄███▀ █ ▀ █▀ ▄█   
+  █ ███ █ █ ▀ ▀▀██ █▄▄█  ▄█▄██▀██▀▀█ █▄   
+  █ ▀▀▀ █ ▄██ ▀ ███▄▄▄▀▀▄█  ▄▄█ █▀█▀▄▄█   
+  ▀▀▀▀▀▀▀ ▀ ▀  ▀▀▀   ▀▀ ▀▀▀   ▀▀ ▀▀▀  ▀   
+                                          
+
+[0;32mI (1538) app_network: If QR code is not visible, copy paste the below URL in a browser.[0m
+https://rainmaker.espressif.com/qrcode.html?data={"ver":"v1","name":"PROV_0d2b67","username":"wifiprov","pop":"daf549da","transport":"softap"}
+[0;32mI (1568) app_network: Provisioning will auto stop after 30 minute(s).[0m

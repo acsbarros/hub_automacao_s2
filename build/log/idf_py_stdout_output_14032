@@ -1,0 +1,125 @@
+Command: C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:\esp\v6.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s2-elf- --target esp32s2 --revision 0 C:\Users\UNILAB\Desktop\projetos-t\hub_automacao_s2\build\hub_automacao_s2.elf C:\Users\UNILAB\Desktop\projetos-t\hub_automacao_s2\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe' 'C:\esp\v6.1\esp-idf\tools\idf.py' '-p' 'COM7'
+ (1770) esp_rmaker_node: Node ID ----- 6867252EEE10[0;32mI (1880) esI (37130) wifi:flush txq[0m
+[0;32mI (37140) wifi:stop sw txq[0m
+[0;32mI (37140) wifi:lmac stop hw txq[0m
+[0;32mI (316) main_task: Started on CPU0[0m
+[0;32mI (316) main_task: Calling app_main()[0m
+[0;32mI (336) wifi:wifi driver task: 3ffd8880, prio:23, stack:6656, core=0[0m
+[0;32mI (346) wifi:wifi firmware version: e12a754[0m
+[0;32mI (346) wifi:wifi certification version: v7.0[0m
+[0;32mI (346) wifi:config NVS flash: enabled[0m
+[0;32mI (346) wifi:config nano formatting: disabled[0m
+[0;32mI (346) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (346) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (346) wifi:Init management short buffer num: 32[0m
+[0;32mI (346) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (346) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (346) wifi:Init static rx buffer num: 10[0m
+[0;32mI (346) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (346) wifi_init: rx ba win: 6[0m
+[0;32mI (346) wifi_init: accept mbox: 6[0m
+[0;32mI (346) wifi_init: tcpip mbox: 32[0m
+[0;32mI (346) wifi_init: udp mbox: 6[0m
+[0;32mI (346) wifi_init: tcp mbox: 6[0m
+[0;32mI (346) wifi_init: tcp tx win: 5760[0m
+[0;32mI (356) wifi_init: tcp rx win: 5760[0m
+[0;32mI (356) wifi_init: tcp mss: 1440[0m
+[0;32mI (356) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (356) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (356) esp_rmaker_work_queue: Work Queue created.[0m
+[1;31mE (356) esp_rmaker_client_data: Failed to get client cert[0m
+[0;32mI (366) esp_claim: Initialising Self Claiming. This may take time.[0m
+[0;32mI (376) esp_claim: Private key already exists with matching type. No need to re-initialise it.[0m
+[0;32mI (1106) esp_rmaker_node: Node ID ----- 6867252EEE10[0m
+[0;32mI (1106) esp_rmaker_time: Initializing SNTP. Using the SNTP server: pool.ntp.org[0m
+[0;32mI (1116) esp_rmaker_core: Starting RainMaker Work Queue task[0m
+[0;32mI (1116) esp_rmaker_work_queue: RainMaker Work Queue task started.[0m
+[0;32mI (1116) app_network: Reusing cached sec2 salt-verifier from NVS[0m
+[0;32mI (1136) app_wifi: Starting provisioning[0m
+[0;32mI (1136) phy_init: phy_version 2623,ff3f498,Dec 17 2025,14:48:07[0m
+[0;32mI (1186) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (1216) wifi:mode : sta (68:67:25:2e:ee:10)[0m
+[0;32mI (1216) wifi:enable tsf[0m
+[0;32mI (1226) wifi:mode : sta (68:67:25:2e:ee:10) + softAP (68:67:25:2e:ee:11)[0m
+[0;32mI (1236) wifi:Total power save buffer number: 16[0m
+[0;32mI (1236) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1236) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1236) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1236) wifi:Total power save buffer number: 16[0m
+[0;32mI (1246) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1256) network_prov_mgr: Provisioning started with service name : PROV_33cf34 [0m
+[0;32mI (1266) app_wifi: Provisioning started[0m
+[0;32mI (1266) app_network: Scan this QR code from the ESP RainMaker phone app for Provisioning.[0m
+[0;32mI (1276) QRCODE: Encoding below text with ECC LVL 0 & QR Code Version 5[0m
+[0;32mI (1286) QRCODE: {"ver":"v1","name":"PROV_33cf34","username":"wifiprov","pop":"9bfb799e","transport":"softap"}[0m
+                                          
+  █▀▀▀▀▀█ █  ▄▄ ▀▀█▀▄▄▀▄▀▀▄▄▀▀  █▀▀▀▀▀█   
+  █ ███ █ ██▄ █▄█▄▀▀█▄▄▀▀█▄▄ ▄█ █ ███ █   
+  █ ▀▀▀ █ ▄██ ▀▀▀▀▀ ▀▄▀█▄▀ ▀█▀  █ ▀▀▀ █   
+  ▀▀▀▀▀▀▀ ▀ █▄▀ ▀ █▄█▄█▄▀▄▀ ▀▄▀ ▀▀▀▀▀▀▀   
+  ██ ▄▀▀▀▄  ▀ ▀▄ ▄ ▀█▀▄▀██▀▄ ▄▀▄ █▄▀▀▀▀   
+   ▀█ ▀█▀▀ ▀▀ ▄ ▀▀█▄ ▄ ▄▄▀▄ █▀▄██ ▀█▄█▄   
+   ▀ ▄▄▄▀ █▀ ▀▄▄▄█▀██▀▀▀ ▄▀▄ ▄▀ ▀█▄▀█▄▀   
+    █▄█▀▀█▄▄▄█▀ ▄▀██▀▄▄▄██▀▀▄▀▀█▄█ █▄     
+  ▄▀▀██ ▀▀ ▄  ▀▄ ▄ ▀█▀▀█ █▀▄▄▄▄██▀▄ ▀▀▀   
+  ▀ ▀▄▀▀▀█▀ ▄ ▄  █▀▄ ▄ █▄▀█ █▀▄█ █▄▀▄▄▄   
+  ██▀██ ▀ █▄▀▀▄▄█▄█▀ ▀▀▀ ▄ ▄ ▄▄██▀▄█▀█▀   
+  ▀▄█ █▀▀▄▄▀▄█▀▀ ▀██▀ ▀▄█▀ ▀ ▀▄█▄▀ █▄▄▄   
+  ▄█  ▄█▀ █▄  ▀  ▄█▀  ▄▀█▄█ ▄▄▀▀█▀▄▀▀ ▀   
+    ▄█▀ ▀  ▀▄ ▄ █▀ ▄ ▄ ██▀ ▀▀▀▄ █▄█▄█▀▄   
+  ▀▀▀   ▀▀▄ ▀▀▄▀██▄▀▄▀██▀█▄▄▄▄█▀▀▀█ ▀▄    
+  █▀▀▀▀▀█ ▄  █▀█▀███▄▄ ▄ ▀  ▄▄█ ▀ ██▄     
+  █ ███ █ ▀▀  ▀█▄▄██▄ ▄▀█▄█ ▄▄████▀▄██▄   
+  █ ▀▀▀ █ ▄▄█ ▄ ▄▀▄▄▀▄ ████ █ ▄  ▀▄██▄    
+  ▀▀▀▀▀▀▀ ▀  ▀ ▀▀ ▀▀ ▀▀▀  ▀  ▀   ▀▀ ▀▀▀   
+                                          
+
+[0;32mI (1576) app_network: If QR code is not visible, copy paste the below URL in a browser.[0m
+https://rainmaker.espressif.com/qrcode.html?data={"ver":"v1","name":"PROV_33cf34","username":"wifiprov","pop":"9bfb799e","transport":"softap"}
+[0;32mI (1596) app_network: Provisioning will auto stop after 30 minute(s).[0m
+[0;32mI (21726) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (21736) wifi:station: 6e:98:73:6b:36:48 join, AID=1, bgn, 20[0m
+[0;32mI (21926) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (22506) security2: Using salt and verifier to generate public key...[0m
+[0;32mI (22726) wifi:<ba-add>idx:2 (ifx:1, 6e:98:73:6b:36:48), tid:0, ssn:16, winSize:64[0m
+[0;32mI (22816) app_network: Secured session established![0m
+[0;32mI (35076) esp_rmaker_user_mapping: Received request for node details[0m
+[0;32mI (35086) esp_rmaker_user_mapping: Got user_id = Google_104541177754461040966, secret_key = 7193f425-7226-443c-8365-abf772465af2[0m
+[0;32mI (35096) esp_rmaker_user_mapping: RainMaker config is not reported, waiting for the event before retrying user mapping.[0m
+[0;32mI (35106) esp_rmaker_user_mapping: Sending status SUCCESS[0m
+[0;33mW (35226) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (35256) app_wifi: Received Wi-Fi credentials[0m
+	SSID     : CLARO.ADS
+	Password : 7D6@1q8182
+[0;32mI (39206) wifi:primary chan differ, old=1, new=8, start CSA timer[0m
+[0;32mI (39636) wifi:switch to channel 8[0m
+[0;32mI (39636) wifi:ap channel adjust o:1,1 n:8,2[0m
+[0;32mI (39636) wifi:new:<8,0>, old:<1,0>, ap:<8,2>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (39646) wifi:new:<8,2>, old:<8,0>, ap:<8,2>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (39656) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (39656) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (39666) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (42676) wifi:state: run -> init (0xf00)[0m
+[0;32mI (42686) wifi:new:<8,0>, old:<8,2>, ap:<8,2>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (45566) wifi:new:<8,2>, old:<8,0>, ap:<8,2>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (45576) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (45586) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (45586) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (48606) wifi:state: run -> init (0xf00)[0m
+[0;32mI (48616) wifi:new:<8,0>, old:<8,2>, ap:<8,2>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (51476) wifi:new:<8,2>, old:<8,0>, ap:<8,2>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (51486) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (51496) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (51496) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (54516) wifi:state: run -> init (0xf00)[0m
+[0;32mI (54526) wifi:new:<8,0>, old:<8,2>, ap:<8,2>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (54536) network_prov_mgr: STA Disconnected[0m
+[1;31mE (54536) network_prov_mgr: Disconnect reason : 15[0m
+[1;31mE (54546) network_prov_mgr: STA Auth Error[0m
+[1;31mE (54546) app_wifi: Provisioning failed![0m
+	Reason : Wi-Fi station authentication failed
+	Please reset to factory and retry provisioning
+[0;32mI (54546) app_wifi: Failed to connect with provisioned AP, reseting provisioned credentials[0m
+[0;32mI (57536) wifi:station: 6e:98:73:6b:36:48 leave, AID = 1, reason = 3, bss_flags is 33721443, bss:0x3ffe5eb4[0m
+[0;32mI (57546) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (57546) wifi:new:<8,2>, old:<8,0>, ap:<8,2>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m

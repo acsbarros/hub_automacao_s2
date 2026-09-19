@@ -1,0 +1,109 @@
+Command: C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:\esp\v6.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s2-elf- --target esp32s2 --revision 0 C:\Users\UNILAB\Desktop\projetos-t\hub_automacao_s2\build\hub_automacao_s2.elf C:\Users\UNILAB\Desktop\projetos-t\hub_automacao_s2\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe' 'C:\esp\v6.1\esp-idf\tools\idf.py' '-p' 'COM7'
+[0;32mI (317) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) ARQUITETURA_APP: LED inicializado no GPIO 13[0m
+[0;32mI (337) wifi:wifi driver task: 3ffd8a64, prio:23, stack:6656, core=0[0m
+[0;32mI (347) wifi:wifi firmware version: e12a754[0m
+[0;32mI (347) wifi:wifi certification version: v7.0[0m
+[0;32mI (357) wifi:config NVS flash: enabled[0m
+[0;32mI (357) wifi:config nano formatting: disabled[0m
+[0;32mI (357) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (357) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (357) wifi:Init management short buffer num: 32[0m
+[0;32mI (357) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (357) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (357) wifi:Init static rx buffer num: 10[0m
+[0;32mI (357) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (357) wifi_init: rx ba win: 6[0m
+[0;32mI (357) wifi_init: accept mbox: 6[0m
+[0;32mI (357) wifi_init: tcpip mbox: 32[0m
+[0;32mI (367) wifi_init: udp mbox: 6[0m
+[0;32mI (367) wifi_init: tcp mbox: 6[0m
+[0;32mI (377) wifi_init: tcp tx win: 5760[0m
+[0;32mI (377) wifi_init: tcp rx win: 5760[0m
+[0;32mI (387) wifi_init: tcp mss: 1440[0m
+[0;32mI (387) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (397) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (397) esp_rmaker_work_queue: Work Queue created.[0m
+[0;32mI (407) esp_mqtt_glue: AWS PPI: ?Platform=APN3|A0|RM|EX00|RMDev|1x0|6867252EEE10[0m
+[0;32mI (417) esp_mqtt_glue: Initialising MQTT[0m
+[0;32mI (417) esp_mqtt_glue: MQTT LWT not configured[0m
+[0;32mI (417) esp_rmaker_mqtt_budget: MQTT Budgeting initialised. Default: 100, Max: 1024, Revive count: 1, Revive period: 5[0m
+[0;32mI (427) esp_rmaker_node: Node ID ----- 6867252EEE10[0m
+[0;32mI (427) esp_rmaker_time: Initializing SNTP. Using the SNTP server: pool.ntp.org[0m
+[0;32mI (437) esp_rmaker_core: Starting RainMaker Work Queue task[0m
+[0;32mI (437) esp_rmaker_work_queue: RainMaker Work Queue task started.[0m
+[0;32mI (437) app_network: Reusing cached sec2 salt-verifier from NVS[0m
+[0;32mI (457) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (457) phy_init: phy_version 2623,ff3f498,Dec 17 2025,14:48:07[0m
+[0;32mI (507) wifi:mode : sta (68:67:25:2e:ee:10)[0m
+[0;32mI (507) wifi:enable tsf[0m
+[0;32mI (2927) wifi:new:<5,1>, old:<1,0>, ap:<255,255>, sta:<5,1>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2937) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2947) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2967) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2987) wifi:connected with INTELBRAS, aid = 4, channel 5, 40U, bssid = 80:85:44:7d:0a:ee[0m
+[0;32mI (3007) wifi:security: WPA2-PSK, phy: bgn, rssi: -60, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (3017) wifi:pm start, type: 1[0m
+
+[0;32mI (3027) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3037) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3347) wifi:<ba-add>idx:0 (ifx:0, 80:85:44:7d:0a:ee), tid:0, ssn:0, winSize:64[0m
+[0;32mI (4067) esp_netif_handlers: sta ip: 10.0.0.36, mask: 255.255.255.0, gw: 10.0.0.1[0m
+[0;32mI (4077) app_network: Connected with IP Address:10.0.0.36[0m
+[0;32mI (4077) esp_rmaker_cmd_resp: Enabling Command-Response Module.[0m
+[0;32mI (4087) esp_rmaker_node: Node attribute cmd-resp created[0m
+[0;32mI (4087) esp_rmaker_param_cmd_resp: Enabling parameter command-response functionality[0m
+[0;32mI (4097) esp_rmaker_param_cmd_resp: Allocated 2048 bytes for command response buffer[0m
+[0;32mI (4107) esp_rmaker_common_cmd_resp: Registered command: cmd=1, access=7[0m
+[0;32mI (4117) esp_rmaker_param_cmd_resp: Registered standard set params command handler (id=1)[0m
+[0;32mI (4127) esp_mqtt_glue: Connecting to mqtt.rainmaker.espressif.com[0m
+[0;32mI (4137) esp_rmaker_core: Waiting for MQTT connection[0m
+[0;32mI (4077) main_task: Returned from app_main()[0m
+[0;32mI (4567) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (6147) esp_mqtt_glue: MQTT Connected[0m
+[0;32mI (6147) esp_rmaker_cmd_resp: Checking for pending commands.[0m
+[0;32mI (6157) esp_rmaker_node_config: Generated Node config of length 572[0m
+[0;32mI (6167) esp_rmaker_core: User node mapping done, initializing MQTT parameters.[0m
+[0;32mI (6177) esp_rmaker_param: Params MQTT Init done.[0m
+[0;32mI (6177) esp_rmaker_param: Reporting params (init): {"Canal Principal":{"Name":"Canal Principal","Power":false}}[0m
+[0;32mI (9287) esp_rmaker_param: Received params: {"Canal Principal":{"Power":true}}[0m
+[0;32mI (9297) esp_rmaker_param: Found 1 params in write request for Canal Principal[0m
+[0;32mI (9307) ARQUITETURA_APP: Comando recebido da Nuvem: LIGAR[0m
+[0;33mW (9307) ARQUITETURA_APP: Hardware Real: Acionando Relés/Motores...[0m
+[0;32mI (9307) esp_rmaker_param: Reporting params: {"Canal Principal":{"Power":true}}[0m
+[0;32mI (10617) esp_rmaker_param: Received params: {"Canal Principal":{"Power":false}}[0m
+[0;32mI (10627) esp_rmaker_param: Found 1 params in write request for Canal Principal[0m
+[0;32mI (10637) ARQUITETURA_APP: Comando recebido da Nuvem: DESLIGAR[0m
+[0;33mW (10637) ARQUITETURA_APP: Hardware Real: Desligando sistema em segurança...[0m
+[0;32mI (10637) esp_rmaker_param: Reporting params: {"Canal Principal":{"Power":false}}[0m
+[0;32mI (12257) esp_rmaker_param: Received params: {"Canal Principal":{"Power":true}}[0m
+[0;32mI (12267) esp_rmaker_param: Found 1 params in write request for Canal Principal[0m
+[0;32mI (12277) ARQUITETURA_APP: Comando recebido da Nuvem: LIGAR[0m
+[0;33mW (12277) ARQUITETURA_APP: Hardware Real: Acionando Relés/Motores...[0m
+[0;32mI (12277) esp_rmaker_param: Reporting params: {"Canal Principal":{"Power":true}}[0m
+[0;32mI (21057) esp_rmaker_param: Received params: {"Canal Principal":{"Power":false}}[0m
+[0;32mI (21067) esp_rmaker_param: Found 1 params in write request for Canal Principal[0m
+[0;32mI (21077) ARQUITETURA_APP: Comando recebido da Nuvem: DESLIGAR[0m
+[0;33mW (21077) ARQUITETURA_APP: Hardware Real: Desligando sistema em segurança...[0m
+[0;32mI (21077) esp_rmaker_param: Reporting params: {"Canal Principal":{"Power":false}}[0m
+[0;32mI (23207) esp_rmaker_param: Received params: {"Canal Principal":{"Power":true}}[0m
+[0;32mI (23217) esp_rmaker_param: Found 1 params in write request for Canal Principal[0m
+[0;32mI (23227) ARQUITETURA_APP: Comando recebido da Nuvem: LIGAR[0m
+[0;33mW (23227) ARQUITETURA_APP: Hardware Real: Acionando Relés/Motores...[0m
+[0;32mI (23227) esp_rmaker_param: Reporting params: {"Canal Principal":{"Power":true}}[0m
+[0;32mI (32827) esp_rmaker_time: SNTP Synchronised.[0m
+[0;32mI (32827) esp_rmaker_time: The current time is: Sun Sep 20 03:45:03 2026 +0800[CST], DST: No.[0m
+[0;32mI (46357) esp_rmaker_param: Received params: {"Canal Principal":{"Name":"esp"}}[0m
+[0;32mI (46367) esp_rmaker_param: Found 1 params in write request for Canal Principal[0m
+[0;32mI (46387) esp_rmaker_param: Reporting params: {"Canal Principal":{"Name":"esp"}}[0m
+[0;32mI (74207) esp_rmaker_param: Received params: {"Canal Principal":{"Power":false}}[0m
+[0;32mI (74217) esp_rmaker_param: Found 1 params in write request for Canal Principal[0m
+[0;32mI (74227) ARQUITETURA_APP: Comando recebido da Nuvem: DESLIGAR[0m
+[0;33mW (74227) ARQUITETURA_APP: Hardware Real: Desligando sistema em segurança...[0m
+[0;32mI (74227) esp_rmaker_param: Reporting params: {"Canal Principal":{"Power":false}}[0m
+[0;32mI (77787) esp_rmaker_param: Received params: {"Canal Principal":{"Power":true}}[0m
+[0;32mI (77797) esp_rmaker_param: Found 1 params in write request for Canal Principal[0m
+[0;32mI (77807) ARQUITETURA_APP: Comando recebido da Nuvem: LIGAR[0m
+[0;33mW (77807) ARQUITETURA_APP: Hardware Real: Acionando Relés/Motores...[0m
+[0;32mI (77807) esp_rmaker_param: Reporting params: {"Canal Principal":{"Power":true}}[0m
